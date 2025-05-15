@@ -5,13 +5,15 @@ package org.example.exoFilm;
 //3. Ajouter un constructeur, des getters et des setters pour ces attributs, ainsi
 //qu'une méthode pour afficher les informations sur le film
 
+import java.time.LocalDate;
+
 public class Film {
     private String titre;
     private String realisateur;
-    private int anneeDeSortie;
+    private LocalDate anneeDeSortie;
     private String genre;
 
-    public Film(String titre, String realisateur, int anneeDeSortie, String genre) {
+    public Film(String titre, String realisateur, LocalDate anneeDeSortie, String genre) {
         this.titre = titre;
         this.realisateur = realisateur;
         this.anneeDeSortie = anneeDeSortie;
@@ -34,11 +36,11 @@ public class Film {
         this.realisateur = realisateur;
     }
 
-    public int getAnneeDeSortie() {
+    public LocalDate getAnneeDeSortie() {
         return anneeDeSortie;
     }
 
-    public void setAnneeDeSortie(int anneeDeSortie) {
+    public void setAnneeDeSortie(LocalDate anneeDeSortie) {
         this.anneeDeSortie = anneeDeSortie;
     }
 

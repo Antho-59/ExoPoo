@@ -25,6 +25,14 @@ public class WaterTank {
         this.capaMax = capaMax;
         this.niveauRemplissage = niveauRemplissage;
     }
+    public WaterTank(int poidsAvide, int capaMax) {
+        this.poidsAvide = poidsAvide;
+        this.capaMax = capaMax;
+        this.niveauRemplissage = 0;
+    }
+
+
+    // methodes
 
     public void remplir(){
         Scanner scanner = new Scanner(System.in);
@@ -33,7 +41,7 @@ public class WaterTank {
         if (this.niveauRemplissage+r >= this.capaMax) {
             System.out.println("pas possible la citerne va deborder");
         }
-        this.niveauRemplissage=this.niveauRemplissage+r;
+        this.niveauRemplissage += r;
         volumeCiternes =volumeCiternes+this.niveauRemplissage;
         System.out.println(" votre citerne est rempli de "+r+" litre.");
     }
@@ -46,7 +54,7 @@ public class WaterTank {
             System.out.println("pas possible la citerne ne contient pas assez de L");
         }
         this.niveauRemplissage=this.niveauRemplissage-v;
-        volumeCiternes =volumeCiternes+this.niveauRemplissage;
+        volumeCiternes =volumeCiternes-this.niveauRemplissage;
         System.out.println(" votre citerne est vider de "+v+" litre.");
     }
 public static void volCiterne(){
