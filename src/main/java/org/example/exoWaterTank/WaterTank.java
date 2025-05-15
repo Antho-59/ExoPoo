@@ -34,29 +34,32 @@ public class WaterTank {
 
     // methodes
 
-    public void remplir(){
+    public void remplir() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("de cb de L voulez vous remplir la citerne?");
         int r = scanner.nextInt();
-        if (this.niveauRemplissage+r >= this.capaMax) {
+        if (this.niveauRemplissage + r > this.capaMax) {
             System.out.println("pas possible la citerne va deborder");
+        } else {
+            this.niveauRemplissage += r;
+            volumeCiternes += this.niveauRemplissage;
+            System.out.println(" votre citerne est rempli de " + r + " litre.");
         }
-        this.niveauRemplissage += r;
-        volumeCiternes += this.niveauRemplissage;
-        System.out.println(" votre citerne est rempli de "+r+" litre.");
     }
 
-    public void vider(){
+    public void vider() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("de cb de L voulez vous vider la citerne?");
         int v = scanner.nextInt();
-        if (this.niveauRemplissage-v <= 0) {
+        if (this.niveauRemplissage - v < 0) {
             System.out.println("pas possible la citerne ne contient pas assez de L");
+        } else {
+            this.niveauRemplissage -= v;
+            volumeCiternes -= this.niveauRemplissage;
+            System.out.println(" votre citerne est vider de " + v + " litre.");
         }
-        this.niveauRemplissage -= v;
-        volumeCiternes -= this.niveauRemplissage;
-        System.out.println(" votre citerne est vider de "+v+" litre.");
     }
+
 public static void volCiterne(){
     System.out.println("il y a "+volumeCiternes+" L au total dans vos citernes");
 
