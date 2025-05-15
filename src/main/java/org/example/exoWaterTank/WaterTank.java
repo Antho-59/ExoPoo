@@ -42,7 +42,7 @@ public class WaterTank {
             System.out.println("pas possible la citerne va deborder");
         }
         this.niveauRemplissage += r;
-        volumeCiternes =volumeCiternes+this.niveauRemplissage;
+        volumeCiternes += this.niveauRemplissage;
         System.out.println(" votre citerne est rempli de "+r+" litre.");
     }
 
@@ -53,8 +53,8 @@ public class WaterTank {
         if (this.niveauRemplissage-v <= 0) {
             System.out.println("pas possible la citerne ne contient pas assez de L");
         }
-        this.niveauRemplissage=this.niveauRemplissage-v;
-        volumeCiternes =volumeCiternes-this.niveauRemplissage;
+        this.niveauRemplissage -= v;
+        volumeCiternes -= this.niveauRemplissage;
         System.out.println(" votre citerne est vider de "+v+" litre.");
     }
 public static void volCiterne(){
