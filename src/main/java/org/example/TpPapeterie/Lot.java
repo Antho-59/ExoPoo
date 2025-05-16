@@ -1,15 +1,15 @@
 package org.example.TpPapeterie;
 
-public class Lot {
+public class Lot extends Article {
 
     // attributq
-    private ArtUnitaire infoArticle;
+    private Article infoArticle;
     private int qtt;
     private double remise;
     private double prixTotal;
 
 //constructor
-    public Lot(ArtUnitaire infoArticle, int qtt, double remise, double prixTotal) {
+    public Lot(Article infoArticle, int qtt, double remise, double prixTotal) {
         this.infoArticle = infoArticle;
         this.qtt = qtt;
         this.remise = remise;
@@ -17,11 +17,11 @@ public class Lot {
     }
 
     // get set
-    public ArtUnitaire getInfoArticle() {
+    public Article getInfoArticle() {
         return infoArticle;
     }
 
-    public void setInfoArticle(ArtUnitaire infoArticle) {
+    public void setInfoArticle(Article infoArticle) {
         this.infoArticle = infoArticle;
     }
 

@@ -5,14 +5,14 @@ import java.util.HashMap;
 
 public class Facture {
     private String client;
-    private Ligne nbLigne;
+    private Ligne[] nbLigne;
     private int nbFacture;
     private String date;
     private int[] qttLigneAchat;
 
  //constructor
 
-    public Facture(String client, Ligne nbLigne, int nbFacture, String date, int[] qttLigneAchat) {
+    public Facture(String client, Ligne[] nbLigne, int nbFacture, String date, int[] qttLigneAchat) {
         this.client = client;
         this.nbLigne = nbLigne;
         this.nbFacture = nbFacture;
@@ -28,11 +28,11 @@ public class Facture {
         this.client = client;
     }
 
-    public Ligne getNbLigne() {
+    public Ligne[] getNbLigne() {
         return nbLigne;
     }
 
-    public void setNbLigne(Ligne nbLigne) {
+    public void setNbLigne(Ligne[] nbLigne) {
         this.nbLigne = nbLigne;
     }
 

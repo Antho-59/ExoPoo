@@ -2,38 +2,19 @@ package org.example.TpPapeterie;
 
 import java.util.HashSet;
 
-public class ArtUnitaire {
+public class ArtUnitaire extends Article {
 
-    protected int ref;
     protected String nom;
     protected double prix;
 
-    // construcuteur
-
-
-    public ArtUnitaire(int ref, String nom, double prix) {
-        this.ref = ref;
+    public ArtUnitaire(int refUnique, String nom, double prix) {
+        super(refUnique);
         this.nom = nom;
         this.prix = prix;
     }
 
     // methodes
-HashSet<ArtUnitaire> set =new HashSet<>();
-
-    public void setArticle(HashSet<ArtUnitaire> set) {
-        this.set = set;
-    }
-
-
-    // getter /setter
-
-    public int getRef() {
-        return ref;
-    }
-
-    public void setRef(int ref) {
-        this.ref = ref;
-    }
+    HashSet<ArtUnitaire> set = new HashSet<>();
 
     public String getNom() {
         return nom;
@@ -51,14 +32,34 @@ HashSet<ArtUnitaire> set =new HashSet<>();
         this.prix = prix;
     }
 
+    public HashSet<ArtUnitaire> getSet() {
+        return set;
+    }
+
+    public void setSet(HashSet<ArtUnitaire> set) {
+        this.set = set;
+    }
 
     @Override
     public String toString() {
         return "ArtUnitaire{" +
-                "ref=" + ref +
-                ", nom='" + nom + '\'' +
+                "nom='" + nom + '\'' +
                 ", prix=" + prix +
                 ", set=" + set +
+                ", refUnique=" + refUnique +
                 '}';
     }
+
+    public void setArticle(HashSet<ArtUnitaire> set) {
+        this.set = set;
+
+
+
+
+    }
 }
+
+
+
+
+
