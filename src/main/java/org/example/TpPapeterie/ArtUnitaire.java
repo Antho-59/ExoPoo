@@ -14,7 +14,7 @@ public class ArtUnitaire extends Article {
     }
 
     // methodes
-    HashSet<ArtUnitaire> set = new HashSet<>();
+
 
     public String getNom() {
         return nom;

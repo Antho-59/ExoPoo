@@ -1,10 +1,10 @@
 package org.example.TpPapeterie;
 
 public class Ligne {
-    private ArtUnitaire article;
+    private Article article;
     private int quantite;
 
-
+// rename tout article
     public Ligne(ArtUnitaire article, int quantite) {
         this.article = article;
         this.quantite = quantite;

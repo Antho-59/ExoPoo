@@ -14,7 +14,7 @@ public class Facture {
 
     public Facture(String client, Ligne[] nbLigne, int nbFacture, String date, int[] qttLigneAchat) {
         this.client = client;
-        this.nbLigne = nbLigne;
+        this.nbLigne = nbLigne; // nexw ligne  ()10
         this.nbFacture = nbFacture;
         this.date = date;
         this.qttLigneAchat = qttLigneAchat;
