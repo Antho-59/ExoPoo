@@ -24,7 +24,6 @@ public class Stylo extends ArtUnitaire {
     @Override
     public String toString() {
         return "Stylo{" +
-                "ref=" + ref +
                 ", nom='" + nom + '\'' +
                 ", prix=" + prix +
                 '}';

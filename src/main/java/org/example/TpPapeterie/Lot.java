@@ -1,28 +1,15 @@
 package org.example.TpPapeterie;
 
-public class Lot extends Article {
-
-    // attributq
-    private Article infoArticle;
+public class Lot extends Article{
     private int qtt;
     private double remise;
-    private double prixTotal;
+    private Article infoArticle;
 
-//constructor
-    public Lot(Article infoArticle, int qtt, double remise, double prixTotal) {
-        this.infoArticle = infoArticle;
-        this.qtt = qtt;
-        this.remise = remise;
-        this.prixTotal = prixTotal;
-    }
-
-    // get set
-    public Article getInfoArticle() {
-        return infoArticle;
-    }
-
-    public void setInfoArticle(Article infoArticle) {
-        this.infoArticle = infoArticle;
+    public Lot(int refUnique,Article infoArticle, int qtt, double remise) {
+        super(refUnique);
+        this.refUnique=refUnique;
+        this.infoArticle=infoArticle;
+        this.qtt=qtt;
     }
 
     public int getQtt() {
@@ -41,22 +28,11 @@ public class Lot extends Article {
         this.remise = remise;
     }
 
-    public double getPrixTotal() {
-        return prixTotal;
+    public Article getInfoArticle() {
+        return infoArticle;
     }
 
-    public void setPrixTotal(double prixTotal) {
-        this.prixTotal = prixTotal;
-    }
-
-    @Override
-    public String toString() {
-        return "Lot{" +
-                "infoArticle=" + infoArticle +
-                ", qtt=" + qtt +
-                ", remise=" + remise +
-                ", prixTotal=" + prixTotal +
-                '}';
+    public void setInfoArticle(Article infoArticle) {
+        this.infoArticle = infoArticle;
     }
 }
-

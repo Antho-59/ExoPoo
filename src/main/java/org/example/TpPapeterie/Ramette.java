@@ -1,14 +1,16 @@
 package org.example.TpPapeterie;
 
 public class Ramette extends ArtUnitaire{
-    public Ramette(int ref, String nom, double prix,Double gramage) {
-        super(ref, nom, prix);
+
+    private double gramage;
+    public Ramette(int ref, String nom, double prix,double gramage) {
+        super(ref, nom, gramage);
+        this.gramage = gramage;
     }
 
     @Override
     public String toString() {
         return "Ramette{" +
-                "ref=" + ref +
                 ", nom='" + nom + '\'' +
                 ", prix=" + prix +
                 ", set=" + set +
