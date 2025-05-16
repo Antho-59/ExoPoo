@@ -7,7 +7,6 @@ public class Lot extends Article{
 
     public Lot(int refUnique,Article infoArticle, int qtt, double remise) {
         super(refUnique);
-        this.refUnique=refUnique;
         this.infoArticle=infoArticle;
         this.qtt=qtt;
     }
@@ -34,5 +33,15 @@ public class Lot extends Article{
 
     public void setInfoArticle(Article infoArticle) {
         this.infoArticle = infoArticle;
+    }
+
+    @Override
+    public String toString() {
+        return "Lot{" +
+                "infoArticle=" + infoArticle +
+                ", qtt=" + qtt +
+                ", remise=" + remise +
+                ", refUnique=" + refUnique +
+                '}';
     }
 }
