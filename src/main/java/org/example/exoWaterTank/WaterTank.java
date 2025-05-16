@@ -38,8 +38,13 @@ public class WaterTank {
         Scanner scanner = new Scanner(System.in);
         System.out.println("de cb de L voulez vous remplir la citerne?");
         int r = scanner.nextInt();
-        if (this.niveauRemplissage + r > this.capaMax) {
+        if (r<0){
+            System.out.println("Valeur negative, impossible !");
+        }
+        else if (this.niveauRemplissage + r > this.capaMax) {
             System.out.println("pas possible la citerne va deborder");
+
+
         } else {
             this.niveauRemplissage += r;
             volumeCiternes += this.niveauRemplissage;
@@ -51,8 +56,15 @@ public class WaterTank {
         Scanner scanner = new Scanner(System.in);
         System.out.println("de cb de L voulez vous vider la citerne?");
         int v = scanner.nextInt();
-        if (this.niveauRemplissage - v < 0) {
-            System.out.println("pas possible la citerne ne contient pas assez de L");
+        if (v<0){
+            System.out.println("Valeur negative, impossible !");
+        }
+        else if (this.niveauRemplissage - v < 0) {
+            System.out.println("Nous allons retirer le maximum");
+            volumeCiternes -= this.niveauRemplissage;
+            this.niveauRemplissage = 0;
+            System.out.println("Il reste "+this.niveauRemplissage+" L dans votre citerne");
+
         } else {
             this.niveauRemplissage -= v;
             volumeCiternes -= this.niveauRemplissage;
@@ -89,6 +101,11 @@ public static void volCiterne(){
     public void setNiveauRemplissage(int niveauRemplissage) {
         this.niveauRemplissage = niveauRemplissage;
     }
+
+    public static int getVolumeCiternes() {
+        return volumeCiternes;
+    }
+
 
     @Override
     public String toString() {
